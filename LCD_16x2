@@ -1,0 +1,28 @@
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2); //menggunakan LCD 16x2
+void setup() {
+  Serial.begin(9600);
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(1, 0);
+  lcd.print("wait to start..");
+  delay(5000);
+  lcd.clear();
+}
+
+void loop() {
+  lcd.setCursor(4,0);
+  lcd.print("ROBOTIC");
+  lcd.setCursor(1,1);
+  lcd.print("SMKN 39 Jakarta");
+  delay(5000);
+  lcd.clear();
+  
+  lcd.setCursor(5,0);
+  lcd.print("ROBOT");
+  lcd.setCursor(1,1);
+  lcd.print("PEMINDAH BARANG");
+  delay(5000);
+  lcd.clear();
+  lcd.clear();
+}
